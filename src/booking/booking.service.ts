@@ -18,6 +18,7 @@ export class BookingService {
     await this.redis.set(data.key, data.value);
     return { success: true };
   }
+
   async publish(data: BookingDto) {
     // 채널 설정
     const channel = 'Ticket';
